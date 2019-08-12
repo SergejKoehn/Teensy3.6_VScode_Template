@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+ 
+    "type": "shell", 
+    
+    "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+    },            
+    "problemMatcher": {
+        "base": "$gcc",
+    },
+
+    "tasks": [
+        {           
+            "label": "Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./make.exe",
+            "args": [
+                "all",
+                "--trace"
+            ]
+        },
+        {           
+            "label": "Rebuild User Code",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./make.exe",
+            "args": [
+                "rebuild"
+            ]
+        },
+        {
+            "label": "Clean",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./make.exe",
+            "args": [
+                "clean"
+            ]
+        },
+        {    
+            "label": "Upload with Teensy Uploader",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./make.exe",
+            "options": {
+              "env": {
+                "ARDUINO_BASE" : "C:/Develop/_Tools/arduino-1.8.9"
+              }
+            },
+            "args": [
+                "upload",
+                "-e"
+            ]
+        },
+        {
+            "label": "Upload with TyCommander",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            
+            "command": "./make.exe",
+            "args": [
+                "uploadTy"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "env": {
+        "ArduinoPath": "C:/Develop/_Tools/arduino-1.8.9",
+        "CompilerPath": "${ArduinoPath}/hardware/tools/arm/bin/arm-none-eabi-gcc.exe",
+        "TeensyCorePath": "${ArduinoPath}/hardware/teensy/avr/cores/teensy3"
+    },
+    "configurations": [
+        {
+            "name": "Teensy",
+            "includePath": [
+                "${workspaceFolder}/src/**",                
+                "${TeensyCorePath}/**",
+                "${ArduinoPath}/hardware/teensy/avr/libraries/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USB_SERIAL",
+                "__MK66FX1M0__",
+                "F_CPU=96000000"
+            ],
+            "compilerPath": "${CompilerPath}",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
