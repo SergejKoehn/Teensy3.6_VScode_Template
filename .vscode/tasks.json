@@ -66,6 +66,40 @@
                 "-e"
             ]
         },
+        {           
+            "label": "[D] Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./make.exe",
+            "options": {
+                "env": {
+                  "ARDUINO_BASE" : "D:/Develop/_Tools/arduino-1.8.9"
+                }
+              },
+              "args": [
+                "all",
+                "--trace"
+            ]
+        },        
+        {    
+            "label": "[D] Upload with Teensy Uploader",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "./make.exe",
+            "options": {
+              "env": {
+                "ARDUINO_BASE" : "D:/Develop/_Tools/arduino-1.8.9"
+              }
+            },
+            "args": [
+                "upload",
+                "-e"
+            ]
+        },        
         {
             "label": "Upload with TyCommander",
             "type": "shell",

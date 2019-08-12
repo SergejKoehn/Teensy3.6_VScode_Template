@@ -42,7 +42,7 @@ void printDirectory(File dir, int numTabs)
      }
 
      entry.close();
-     delay(1000);
+     delay(200);
    }
 }
 
@@ -63,6 +63,6 @@ void setup()
 
 void loop() 
 {
-  Serial.println("Hello World DIR!!!");
+  Serial.println("Hello World Home DIR!!!");
   delay(1000);
 }
